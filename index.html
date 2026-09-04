@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1519">
+<meta name="description" content="Kishore B. — First-year ECE student exploring the intersection of electronics, software and AI.">
+<meta property="og:title" content="Kishore B. — ECE × Software">
+<meta property="og:description" content="Curious by circuit. Building small, useful software while learning.">
+<meta property="og:type" content="website">
+<title>Kishore B. — ECE × Software</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1519;color:#e9f0ef}button,input,textarea{font:inherit}button,a{color:inherit}a{text-decoration:none}button{cursor:pointer}
+:root{--bg:#0b1519;--panel:#15282f;--line:rgba(233,240,239,.13);--muted:#91a2a5;--accent:#ff7048;--teal:#49c6b2;--cream:#f2eee5;--dark:#17262c}
+.wrap{width:min(1180px,calc(100% - 56px));margin:auto}.topbar{height:72px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;background:rgba(11,21,25,.88);backdrop-filter:blur(16px)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{border:0;background:none;font-weight:800;display:flex;gap:10px;align-items:center}.mark{width:30px;height:30px;border:1px solid var(--line);display:grid;place-items:center;border-radius:7px;color:var(--accent);font-size:10px}.links{display:flex;gap:25px;align-items:center;font:10px monospace;color:var(--muted)}.links button{border:0;background:none;color:inherit}.links button:hover{color:#fff}.open{display:flex;gap:7px;align-items:center}.open i{width:6px;height:6px;border-radius:50%;background:#54c78b;display:inline-block;animation:pulseDot 2s ease-in-out infinite}.menu{display:none;background:none;border:1px solid var(--line);color:#fff;padding:8px;border-radius:6px}
+.hero{padding:100px 0 80px;min-height:650px}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.eyebrow{font:9px monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:flex;gap:10px;align-items:center}.eyebrow:before{content:"";width:20px;height:1px;background:var(--accent)}h1{font-size:clamp(64px,8vw,118px);line-height:.9;letter-spacing:-.07em;margin:20px 0}em{font-style:normal;color:var(--accent)}.hero p{color:var(--muted);line-height:1.8;max-width:650px}.actions{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}.btn{padding:13px 17px;border-radius:6px;border:1px solid var(--line);background:none;color:#fff;font:10px monospace;transition:all .25s ease}.primary{background:#e9f0ef;color:#0b1519;border-color:#e9f0ef}.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}.note{margin-top:38px;color:var(--muted);font:9px monospace}.visual{position:relative;max-width:450px;margin:auto}.portrait{aspect-ratio:1;border:1px solid rgba(73,198,178,.5);position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(73,198,178,.16),rgba(255,112,72,.06));background-image:linear-gradient(rgba(73,198,178,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(73,198,178,.15) 1px,transparent 1px);background-size:34px 34px}.core{position:absolute;inset:38% 40%;border-radius:50%;background:#102027;border:1px solid var(--accent);display:grid;place-items:center;font-size:23px;font-weight:bold;color:var(--accent);box-shadow:0 0 0 20px rgba(255,112,72,.05),0 0 0 45px rgba(255,112,72,.035);overflow:hidden}.core img{width:100%;height:100%;object-fit:cover}.upload{position:absolute;bottom:8%;right:8%;padding:8px;border:1px solid var(--line);background:rgba(11,21,25,.7);font:8px monospace;cursor:pointer}.upload input{display:none}.tag{position:absolute;bottom:-8px;left:0;background:var(--accent);padding:8px 12px;font:8px monospace}.signal{font:8px monospace;color:var(--muted);text-align:right;margin-top:15px}.strip{border-block:1px solid var(--line);background:#122228}.stripIn{min-height:70px;display:grid;grid-template-columns:1fr auto auto;gap:50px;align-items:center;font:9px monospace;color:var(--muted)}.stat strong{font:22px Arial;color:#fff;margin-right:7px}.dot{width:6px;height:6px;border-radius:50%;background:#54c78b;display:inline-block;margin-right:7px}
+section{padding:115px 0}.about{background:#f2eee5;color:#17262c}.aboutGrid,.journeyGrid,.contactGrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:90px}.about h2,.journey h2,.contact h2{font-size:clamp(48px,5.3vw,76px);line-height:.92;letter-spacing:-.06em;margin:20px 0}.copy p{color:#68767a;line-height:1.85}.copy .lead{font-size:19px;color:#17262c}.copy strong{color:#247e73}.principles{margin-top:40px;border-top:1px solid rgba(23,38,44,.12);display:grid;grid-template-columns:1fr 1fr}.principle{padding:20px 15px;border-bottom:1px solid rgba(23,38,44,.12);font-size:11px}.principle b{font-size:12px}.principle p{font-size:10px;margin-bottom:0}.principle:nth-child(even){border-left:1px solid rgba(23,38,44,.12);padding-left:20px}.skills{margin-top:85px;border:1px solid rgba(23,38,44,.12);padding:24px;background:#fffdf8}.panel{display:flex;justify-content:space-between;font:8px monospace;color:#68767a;padding-bottom:18px;border-bottom:1px solid rgba(23,38,44,.12)}.skillcols{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:25px 0}.skillcols>div+div{border-left:1px solid rgba(23,38,44,.12);padding-left:30px}.skillcols h3{font-size:12px}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill{padding:7px 9px;border:1px solid rgba(23,38,44,.12);background:#e8f0ee;border-radius:3px;font:9px monospace;color:#587276;transition:all .2s ease}.pill:hover{background:#d8e8e4;transform:translateY(-1px)}
+.projects{background:#0d1c22}.projectHead{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end}.projectHead h2{font-size:clamp(50px,5.3vw,76px);line-height:.92;letter-spacing:-.06em;margin:20px 0}.projectHead p{color:#91a2a5;line-height:1.8;font-size:13px}.filters{display:flex;gap:7px;margin:45px 0 20px;flex-wrap:wrap}.filters button{font:9px monospace;padding:8px 11px;background:none;color:#91a2a5;border:1px solid var(--line);border-radius:3px;transition:all .2s ease}.filters .active{color:var(--accent);border-color:var(--accent)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#15282f;border:1px solid rgba(255,255,255,.1);overflow:hidden;transition:.4s cubic-bezier(.2,.8,.2,1);cursor:pointer}.card:hover{transform:translateY(-6px);border-color:rgba(255,112,72,.6);box-shadow:0 20px 50px rgba(0,0,0,.25)}.art{height:205px;position:relative;background:#246c65;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:27px 27px}.art:nth-child(4n+2){background-color:#a84e34}.card:nth-child(3) .art{background-color:#b18d16}.card:nth-child(4) .art{background-color:#315b76}.shape{position:absolute;width:48%;height:38%;left:26%;top:31%;border:1px solid #fff;transform:skew(-17deg) rotate(-4deg)}.shape:after,.shape:before{content:"";position:absolute;left:24%;right:18%;height:1px;background:var(--accent)}.shape:before{top:38%}.shape:after{top:65%}.artLabel{position:absolute;top:14px;right:14px;font:8px monospace;border:1px solid rgba(255,255,255,.25);padding:5px}.body{padding:20px}.meta{display:flex;justify-content:space-between;color:#91a2a5;font:8px monospace}.body h3{font-size:19px;margin:16px 0 8px}.body p{font-size:11px;color:#9aabad;line-height:1.65;min-height:50px}.foot{display:flex;justify-content:space-between;gap:10px;align-items:end}.tags{display:flex;gap:5px;flex-wrap:wrap}.tags span{font:7px monospace;color:#91a2a5;border:1px solid var(--line);padding:5px 7px}.details{color:var(--accent);font:8px monospace;background:none;border:0}
+.journey{background:#f2eee5;color:#17262c}.journeyGrid{grid-template-columns:.7fr 1.3fr}.journey p{color:#68767a;line-height:1.8;font-size:13px}.timeline{border-top:1px solid rgba(23,38,44,.13)}.item{display:grid;grid-template-columns:105px 1fr;padding:27px 0;border-bottom:1px solid rgba(23,38,44,.13);gap:20px}.item>span{font:8px monospace;color:var(--accent)}.item h3{font-size:14px;margin:0 0 7px}.item p{font-size:11px;margin:0}
+.contact{background:#dceae7;color:#17262c;padding-bottom:0}.contactGrid{grid-template-columns:1fr .9fr}.contact h2{color:#17262c}.contactCopy p{color:#607276;line-height:1.8;font-size:13px;max-width:480px}.contactLinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}.contactLinks a{border:1px solid rgba(23,38,44,.14);padding:9px 11px;font:8px monospace;transition:all .2s ease}.contactLinks a:hover{background:#17262c;color:#fff}.form{border-top:1px solid rgba(23,38,44,.16)}label{display:block;padding-top:18px;font:8px monospace;color:#68767a}input,textarea{width:100%;border:0;border-bottom:1px solid rgba(23,38,44,.15);background:none;padding:12px 0;color:#17262c;outline:none;transition:border-color .2s}input:focus,textarea:focus{border-color:var(--accent)}textarea{height:105px;resize:vertical}.send{width:100%;margin-top:18px;background:#15282f;color:#fff;border-color:#15282f}.send:hover{background:var(--accent);border-color:var(--accent)}.footer{border-top:1px solid rgba(23,38,44,.14);margin-top:65px;padding:25px 0;display:flex;justify-content:space-between;font:8px monospace;color:#758487}
+.modal{display:none;position:fixed;inset:0;background:rgba(3,10,13,.8);z-index:50;place-items:center;padding:20px}.modal.show{display:grid}.box{background:#15282f;border:1px solid var(--line);width:min(720px,100%);padding:32px;position:relative}.close{position:absolute;right:10px;top:10px;background:none;border:1px solid var(--line);color:#fff;padding:7px}.box h2{font-size:40px;margin:15px 0}.box p{color:#91a2a5;line-height:1.8}.toast{position:fixed;bottom:20px;right:20px;background:#15282f;border:1px solid var(--line);padding:13px 16px;font:9px monospace;z-index:80;border-radius:6px}
+
+/* Smooth premium motion */
+body{overflow-x:hidden}
+.hero,.strip,section{animation:pageIn .7s cubic-bezier(.2,.8,.2,1) both}
+.card{will-change:transform}
+.btn,.filters button,.contactLinks a{transition:transform .22s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.portrait{animation:floatPortrait 6s ease-in-out infinite}
+.core{animation:pulseCore 3s ease-in-out infinite}
+.art:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.16) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s ease}
+.card:hover .art:after{transform:translateX(120%)}
+@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes floatPortrait{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes pulseCore{0%,100%{box-shadow:0 0 0 20px rgba(255,112,72,.05),0 0 0 45px rgba(255,112,72,.03)}50%{box-shadow:0 0 0 28px rgba(255,112,72,.08),0 0 0 58px rgba(255,112,72,.025)}}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.4}}
+.projectDrawer{position:fixed;inset:0;z-index:100;background:rgba(4,10,13,.68);backdrop-filter:blur(12px);display:flex;justify-content:flex-end;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .38s ease,visibility .38s ease}
+.projectDrawer.show{opacity:1;visibility:visible;pointer-events:auto}
+.drawerPanel{height:100%;width:min(760px,100%);background:#f2eee5;color:#17262c;padding:34px clamp(24px,5vw,60px);overflow:auto;transform:translateX(105%);transition:transform .62s cubic-bezier(.16,1,.3,1);box-shadow:-25px 0 70px rgba(0,0,0,.3)}
+.projectDrawer.show .drawerPanel{transform:translateX(0)}
+.drawerTop{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(23,38,44,.13);padding-bottom:18px}
+.drawerBack{border:1px solid rgba(23,38,44,.15);background:none;color:#17262c;padding:10px 13px;border-radius:5px;font:9px monospace;transition:transform .2s ease,background .2s ease}
+.drawerBack:hover{background:#17262c;color:#fff}
+.drawerArt{height:240px;margin:28px 0;position:relative;overflow:hidden;background:#246c65;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:28px 28px}
+.drawerArt .shape{animation:signalShape 1.3s ease-in-out infinite alternate}
+@keyframes signalShape{from{transform:skew(-17deg) rotate(-4deg) translateX(-4px)}to{transform:skew(-17deg) rotate(-4deg) translateX(4px)}}
+.drawerEyebrow{font:9px monospace;color:#c65b3b;letter-spacing:.12em}
+.drawerPanel h2{font-size:clamp(46px,7vw,76px);line-height:.9;letter-spacing:-.06em;margin:15px 0 20px}
+.drawerPanel h2 em{color:#c65b3b}
+.drawerDescription{font-size:16px;line-height:1.8;color:#607276}
+.drawerFacts{display:grid;grid-template-columns:1fr 1fr;border-block:1px solid rgba(23,38,44,.13);margin:28px 0}
+.drawerFact{padding:18px 0;font:9px monospace}.drawerFact:nth-child(even){padding-left:20px;border-left:1px solid rgba(23,38,44,.13)}
+.drawerActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.drawerActions a{border:1px solid rgba(23,38,44,.15);padding:12px 15px;border-radius:5px;font:9px monospace;transition:.25s}
+.drawerActions a:hover{background:#17262c;color:#fff;transform:translateY(-2px)}
+@media(max-width:850px){.drawerPanel{width:100%;padding:24px 18px}.drawerArt{height:190px}.drawerFacts{grid-template-columns:1fr}.drawerFact:nth-child(even){border-left:0;border-top:1px solid rgba(23,38,44,.13);padding-left:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+
+@media(max-width:850px){.wrap{width:calc(100% - 34px)}.links{display:none}.links.open{display:flex;position:absolute;top:72px;left:0;right:0;padding:18px;background:#0b1519;flex-direction:column;align-items:flex-start}.menu{display:block}.hero{padding:70px 0}.heroGrid,.aboutGrid,.journeyGrid,.contactGrid,.projectHead{grid-template-columns:1fr;gap:45px}.hero h1{font-size:64px}.grid{grid-template-columns:1fr}.stripIn{grid-template-columns:1fr 1fr;gap:15px}.stripIn>:first-child{grid-column:1/-1}.skillcols{grid-template-columns:1fr}.skillcols>div+div{border-left:0;border-top:1px solid rgba(23,38,44,.12);padding:25px 0 0}.principles{grid-template-columns:1fr}.principle:nth-child(even){border-left:0;padding-left:15px}.section{padding:80px 0}}
+@media(max-width:480px){.wrap{width:calc(100% - 28px)}.hero h1{font-size:57px}.actions .btn{flex:1}.portrait{width:100%}.body{padding:17px}.projectHead h2,.about h2,.journey h2,.contact h2{font-size:48px}.item{grid-template-columns:70px 1fr}.footer{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav"><button class="brand" onclick="go('intro')"><span class="mark">KB</span>Kishore B.</button><nav class="links" id="links"><button onclick="go('about')">01 / About</button><button onclick="go('projects')">02 / Projects</button><button onclick="go('journey')">03 / Journey</button><button onclick="go('contact')">04 / Contact</button><span class="open"><i></i> open to learning</span></nav><button class="menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button></div></header>
+
+<section class="hero" id="intro"><div class="wrap heroGrid"><div><div class="eyebrow">First-year ECE student</div><h1>Curious by<br><em>circuit.</em></h1><p>I’m Kishore — an ECE student learning to turn signals, systems and half-formed ideas into software that feels clear and useful.</p><div class="actions"><button class="btn primary" onclick="openProjects()">Explore projects ↓</button><button class="btn" onclick="go('contact')">Say hello ↗</button></div><div class="note">— currently building a stronger foundation in web development</div></div><div class="visual"><div class="portrait" id="portrait"><div class="core" id="core">KB</div><label class="upload"><input type="file" accept="image/*" onchange="photo(this)">Add profile image</label><span class="tag">ECE × SOFTWARE × AI</span></div><div class="signal">INPUT　<span style="color:#ff7048">—</span>　PROCESS　<span style="color:#ff7048">—</span>　OUTPUT</div></div></div></section>
+<div class="strip"><div class="wrap stripIn"><div><span class="dot"></span>SYSTEM STATUS: LEARNING</div><div class="stat"><strong>01</strong>year of ECE</div><div class="stat"><strong>∞</strong>questions worth asking</div></div></div>
+
+<section class="about" id="about"><div class="wrap"><div class="aboutGrid"><div><div class="eyebrow">A little context</div><h2>Hardware taught me<br><em>to look closer.</em></h2></div><div class="copy"><p class="lead">I’m a first-year Electronics and Communication Engineering student, finding my way into software one small experiment at a time.</p><p>ECE gives me a habit of tracing things back to first principles. Software gives me a way to make those ideas <strong>visible, useful, and a little more human.</strong></p><div class="principles">
+<div class="principle"><b>01 — Stay curious</b><p>Ask what is happening underneath the interface.</p></div><div class="principle"><b>02 — Make it clear</b><p>Good work should explain itself before it needs a manual.</p></div><div class="principle"><b>03 — Ship small</b><p>A working experiment teaches more than a perfect plan.</p></div><div class="principle"><b>04 — Keep going</b><p>Consistency is a surprisingly powerful debugging tool.</p></div></div></div></div>
+<div class="skills"><div class="panel"><span>KNOWLEDGE / SIGNAL MAP</span><span>UPDATED AS I LEARN</span></div><div class="skillcols"><div><h3>⚙ Current tools</h3><div class="pills"><span class="pill">Python</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">C++</span></div></div><div><h3>◇ Exploring next</h3><div class="pills"><span class="pill">React</span><span class="pill">Machine learning</span><span class="pill">AI tools</span><span class="pill">Git</span><span class="pill">Embedded basics</span></div></div></div></div></div></section>
+
+<section class="projects" id="projects"><div class="wrap"><div class="projectHead"><div><div class="eyebrow">Selected work</div><h2>Small projects.<br><em>Real signals.</em></h2></div><p>A workbench in public. Some things are built, some are still becoming — all are honest snapshots of the learning process.</p></div><div class="filters"><button class="active" onclick="filter('All',this)">All / 04</button><button onclick="filter('Build',this)">Build / 02</button><button onclick="filter('Explore',this)">Explore / 02</button></div><div class="grid" id="grid"></div></div></section>
+
+<section class="journey" id="journey"><div class="wrap journeyGrid"><div><div class="eyebrow">The learning loop</div><h2>Still in the<br><em>signal.</em></h2><p>There is no polished career story here yet — just a clear direction, regular practice, and a lot of interest in how things work.</p></div><div class="timeline"><div class="item"><span>NOW / 01</span><div><h3>Learning the web from the interface down</h3><p>Building React projects, becoming more intentional with CSS, and learning to use Git as a thinking tool.</p></div></div><div class="item"><span>NEXT / 02</span><div><h3>Make the fundamentals sturdier</h3><p>Spending time with JavaScript, data structures, accessibility, and habits that make code easier to revisit.</p></div></div><div class="item"><span>LATER / 03</span><div><h3>Find the bridge between circuits and code</h3><p>Exploring embedded systems and human-friendly software without rushing the part where I am still learning.</p></div></div></div></div></section>
+
+<section class="contact" id="contact"><div class="wrap contactGrid"><div class="contactCopy"><div class="eyebrow">Open channel</div><h2>Have a good<br><em>question?</em></h2><p>Whether it’s about a project, a learning resource, or the space where hardware meets software, I’d be glad to hear from you.</p><div class="contactLinks"><a href="mailto:kishore071178@gmail.com">✉ Email</a><a href="https://www.linkedin.com/in/kishore-b-34130a428" target="_blank" rel="noopener noreferrer">in LinkedIn</a><a href="https://github.com/kishore-b" target="_blank" rel="noopener noreferrer">◉ GitHub</a></div></div><form class="form" onsubmit="send(event)"><label>Your name<input id="name" required placeholder="What should I call you?"></label><label>Your email<input id="email" type="email" required placeholder="you@example.com"></label><label>The note<textarea id="note" required placeholder="Tell me what you’re thinking about…"></textarea></label><button class="btn send" type="submit">↗ Send a note</button></form></div><div class="wrap footer"><span>© 2026 Kishore B. / made while learning.</span><span>ECE × SOFTWARE × AI</span></div></section>
+
+<div class="projectDrawer" id="projectDrawer" aria-hidden="true">
+<div class="drawerPanel" id="drawerPanel" role="dialog" aria-modal="true">
+<div class="drawerTop"><span class="drawerEyebrow">PROJECT / DEEP DIVE</span><button class="drawerBack" onclick="closeProjects()">← BACK HOME</button></div>
+<div class="drawerArt" id="drawerArt"><span class="shape"></span></div>
+<div class="drawerEyebrow" id="drawerMeta"></div><h2 id="drawerTitle"></h2>
+<p class="drawerDescription" id="drawerDescription"></p>
+<div class="drawerFacts"><div class="drawerFact"><b>CATEGORY</b><br><span id="drawerCategory"></span></div><div class="drawerFact"><b>STATUS</b><br><span id="drawerYear"></span></div></div>
+<div class="tags" id="drawerTags"></div><p id="drawerDetail" style="line-height:1.8;color:#68767a"></p>
+<div id="drawerProjectPicker" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:24px 0"></div>
+<div class="drawerActions"><a id="drawerCode" href="#" target="_blank" rel="noopener">↗ VIEW CODE</a><a id="drawerDemo" href="#" target="_blank" rel="noopener">↗ LIVE DEMO</a><button class="drawerBack" onclick="closeProjects()">ESC / BACK TO HOME</button></div>
+</div></div><div class="modal" id="modal"><div class="box"><button class="close" onclick="closeModal()">✕</button><div class="eyebrow">PROJECT DETAILS</div><h2 id="mtitle"></h2><p id="mdetail"></p><div class="tags" id="mtags"></div><br><button class="btn primary" onclick="closeModal()">Close</button></div></div><div class="toast" id="toast" style="display:none"></div>
+
+<script>
+const data=[
+["01","Circuit Canvas","Build","2026","A visual playground for sketching simple circuits and understanding what changes when the switch flips.","A browser learning experiment that turns components into movable pieces and uses live visual feedback to make signal flow easier to understand.",["JavaScript","SVG","UI"],"https://github.com/kishore-b/circuit-canvas","https://codepen.io/"],
+["02","StudyFlow","Build","2026","A focused study timer that turns a large syllabus into small, visible next steps.","A calm productivity interface built to practice React state, timers, progress feedback and responsive design.",["React","CSS","State"],"https://github.com/kishore-b/studyflow","https://stackblitz.com/"],
+["03","Syntax Notes","Explore","In progress","A growing collection of compact notes from learning JavaScript, React, Git and the web.","A living knowledge base: one concept, one example and one question at a time.",["Learning","Markdown","Web"],"https://github.com/kishore-b/syntax-notes","https://developer.mozilla.org/"],
+["04","Component Lab","Explore","2026","Small interface studies exploring hierarchy, motion, accessibility and useful feedback.","A place to test focused UI ideas: clearer empty states, better forms and motion that communicates.",["React","Design","Motion"],"https://github.com/kishore-b/component-lab","https://www.figma.com/community"]
+];
+function render(kind="All"){grid.innerHTML=data.filter(x=>kind==="All"||x[2]===kind).map((p,i)=>`<article class="card" onclick="openProjectDrawer(${i})"><div class="art"><span class="shape"></span><span class="artLabel">${p[1].toUpperCase()} / ${p[0]}</span></div><div class="body"><div class="meta"><span>${p[0]} / ${p[2].toUpperCase()}</span><span>${p[3]}</span></div><h3>${p[1]}</h3><p>${p[4]}</p><div class="foot"><div class="tags">${p[6].map(t=>`<span>${t}</span>`).join("")}</div><button class="details">View details ↗</button></div></div></article>`).join("")}
+function filter(k,b){document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(k)}
+function openProjects(){
+  projectDrawer.classList.add("show");
+  projectDrawer.setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+  drawerTitle.textContent="Selected Work";
+  drawerMeta.textContent="04 PROJECTS / CHOOSE A SIGNAL";
+  drawerDescription.textContent="Pick a project from the workbench to open its full details here.";
+  drawerDetail.textContent="The home page stays underneath while the selected project slides into view.";
+  drawerCategory.textContent="BUILD + EXPLORE";
+  drawerYear.textContent="2026";
+  drawerTags.innerHTML="";
+  renderProjectPicker(-1);
+  drawerCode.href="#";
+  drawerDemo.href="#";
+  drawerArt.style.backgroundColor="#246c65";
+}
+function renderProjectPicker(active=-1){
+  drawerProjectPicker.innerHTML=data.map((p,i)=>`<button onclick="openProjectDrawer(${i})" style="text-align:left;padding:14px;border:1px solid rgba(23,38,44,.15);background:${i===active?"#17262c":"transparent"};color:${i===active?"#fff":"#17262c"};border-radius:5px;font:10px monospace;transition:.25s;cursor:pointer">${p[0]} / ${p[1]}</button>`).join("");
+}
+function openProjectDrawer(i){const p=data[i];drawerTitle.textContent=p[1];drawerMeta.textContent=p[0]+" / "+p[2].toUpperCase();drawerDescription.textContent=p[4];drawerDetail.textContent=p[5];drawerCategory.textContent=p[2];drawerYear.textContent=p[3];drawerTags.innerHTML=p[6].map(x=>`<span>${x}</span>`).join("");renderProjectPicker(i);drawerCode.href=p[7];drawerDemo.href=p[8];drawerArt.style.backgroundColor=["#246c65","#a84e34","#b18d16","#315b76"][i%4];projectDrawer.classList.add("show");projectDrawer.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function closeProjects(){projectDrawer.classList.remove("show");projectDrawer.setAttribute("aria-hidden","true");document.body.style.overflow=""}
+projectDrawer.addEventListener("click",e=>{if(e.target===projectDrawer)closeProjects()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&projectDrawer.classList.contains("show"))closeProjects()});
+
+function openModal(i){let p=data[i];mtitle.textContent=p[1];mdetail.textContent=p[5];mtags.innerHTML=p[6].map(x=>`<span>${x}</span>`).join("");modal.classList.add("show")}
+function closeModal(){modal.classList.remove("show")}
+function go(id){document.getElementById(id).scrollIntoView({behavior:"smooth"});document.getElementById("links").classList.remove("open")}
+function photo(input){let f=input.files[0];if(!f)return;let r=new FileReader();r.onload=()=>core.innerHTML=`<img src="${r.result}" alt="Profile">`;r.readAsDataURL(f)}
+function send(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const note = document.getElementById("note").value.trim();
+  const subject = encodeURIComponent(`Portfolio message from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${note}`);
+  window.location.href = `mailto:kishore071178@gmail.com?subject=${subject}&body=${body}`;
+  toast.style.display="block";
+  toast.textContent="Opening your email app…";
+  setTimeout(()=>toast.style.display="none",3000);
+}
+render();
+</script>
+</body>
+</html>
